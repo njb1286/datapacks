@@ -149,5 +149,5 @@ scoreboard players operation @s nb.calcDif.in.time = @s nb.time
         function nb:animation/play/calc_dif/get_dif
         execute store result storage nb:animation smooth_move.body[2] float 1 run scoreboard players get @s nb.calcDif.out
 
-data modify storage nb:animation from set from storage nb:animation run_animation[0]
+execute unless score @s nb.frameRepeat matches 1.. run data modify storage nb:animation from set from storage nb:animation run_animation[0]
 tag @s remove nb.calc_dif

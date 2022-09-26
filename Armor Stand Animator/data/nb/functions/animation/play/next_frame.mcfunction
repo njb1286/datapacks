@@ -1,10 +1,6 @@
 scoreboard players remove @s nb.frameRepeat 1
 
-# tellraw @a {"score": {"name": "@s", "objective": "nb.frameRepeat"}}
-
 execute unless score @s nb.frameRepeat matches 1.. run data remove storage nb:animation run_animation[0]
-
-tellraw @a {"storage": "nb:animation", "nbt": "run_animation[0]"}
 
 execute unless data storage nb:animation run_animation[0] run function nb:animation/play/repeat/setup
 execute unless score @s nb.frameRepeat matches 1.. run function nb:animation/play/frame_repeat/repeat

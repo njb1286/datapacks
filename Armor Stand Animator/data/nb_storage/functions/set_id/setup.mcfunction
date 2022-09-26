@@ -1,10 +1,12 @@
-tag @s add nb.storage.selected
+tag @s[tag=!nb_storage.selected] add nb_storage.selected
 
 setblock ~ ~ ~ barrel
 
-loot insert ~ ~ ~ loot nb:id
-execute store result score @s nb.id run data get block ~ ~ ~ Items[0].tag.AttributeModifiers[0].Amount
+loot insert ~ ~ ~ loot nb_storage:id
+execute store result score @s nb_storage.id run data get block ~ ~ ~ Items[0].tag.AttributeModifiers[0].Amount
 
-setblock ~ ~ ~ air
+# setblock ~ ~ ~ air
 
-execute as @e[scores={nb.id = 1..}] if score @s nb.id = @e[limit=1,sort=nearest] nb.id as @e[limit=1,sort=nearest] run function nb:set_id/setup
+execute as @e[scores={nb_storage.id = 1..},tag=!nb_storage.selected] if score @s nb_storage.id = @e[limit=1,sort=nearest,tag=nb_storage.selected] nb_storage.id as @e[limit=1,sort=nearest,tag=nb_storage.selected] run function nb_storage:set_id/setup
+
+tag @s remove nb_storage.selected

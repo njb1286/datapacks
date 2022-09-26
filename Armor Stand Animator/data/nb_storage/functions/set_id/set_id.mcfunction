@@ -1,1 +1,1 @@
-execute in nb:storage positioned 0 0 0 run function nb:set_id/setup
+execute in nb_storage:storage positioned 0 0 0 run function nb_storage:set_id/setup

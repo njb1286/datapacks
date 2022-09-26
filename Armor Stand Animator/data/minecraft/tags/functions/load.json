@@ -1,5 +1,6 @@
 {
     "values": [
-        "nb:load"
+        "nb:load",
+        "nb_storage:load"
     ]
 }

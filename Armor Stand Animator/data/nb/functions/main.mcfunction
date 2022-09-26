@@ -1,1 +1,1 @@
-execute as @e[tag=nb.animation.running_animation] at @s if data storage nb:animation run_animation[0] run function nb:animation/play/tick
+execute as @e[tag=nb.animation.animated] at @s if data storage nb:animation run_animation[0] run function nb:animation/play/tick

@@ -1,7 +1,7 @@
 execute if data storage nb:animation animation.repeat store result score @s nb.animationRepeat run data get storage nb:animation animation.repeat
 execute unless data storage nb:animation animation.repeat run scoreboard players set @s nb.animationRepeat 1
 
-tag @s add nb.animation.running_animation
+tag @s add nb.animation.animated
 
 function nb:animation/play/ensure_pose_data
 

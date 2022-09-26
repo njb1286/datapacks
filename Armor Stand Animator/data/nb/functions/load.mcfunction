@@ -31,6 +31,8 @@ scoreboard objectives add nb.iz dummy
 scoreboard objectives add nb.animationRepeat dummy
 scoreboard objectives add nb.frameRepeat dummy
 
+scoreboard objectives add nb.id dummy
+
 # Math stuff
 scoreboard objectives add nb.math dummy
 scoreboard players set 1000000 nb.math 1000000
@@ -42,3 +44,5 @@ scoreboard players set 1000000 nb.math 1000000
 # data modify storage nb:animation animation set value {repeat: 25, enforceData: true, start: {pos: [-17000000d, -60000000d, -17000000d], rightArm: [90000000f, 0f, 0f], leftArm: [-90000000f, 0f, 0f], rightLeg: [-90000000f, 0f, 0f], leftLeg: [90000000f, 0f, 0f]}, frames: [{time: 10, params: {smooth: true}, pos: [-17000000d, -60000000d, -15000000d], rightArm: [-90000000f, 0f, 0f], leftArm: [90000000f, 0f, 0f], rightLeg: [90000000f, 0f, 0f], leftLeg: [-90000000f, 0f, 0f]}, {time: 10, pos: [-17000000d, -60000000d, -13000000d], rightArm: [90000000f, 0f, 0f], leftArm: [-90000000f, 0f, 0f], rightLeg: [-90000000f, 0f, 0f], leftLeg: [90000000f, 0f, 0f], params: {smooth: true}}]}
 
 data modify storage nb:animation smooth_move set value { pos: [0d, 0d, 0d], rotation: [0f, 0f], rightArm: [0f, 0f, 0f], leftArm: [0f, 0f, 0f], rightLeg: [0f, 0f, 0f], leftLeg: [0f, 0f, 0f], head: [0f, 0f, 0f], body: [0f, 0f, 0f] }
+
+execute in nb:storage run forceload add 0 0 0 0

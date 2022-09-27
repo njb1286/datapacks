@@ -1,0 +1,2 @@
+execute as @e[limit=1,sort=nearest,tag=nb.animation.data] run data modify entity @s data.from set from entity @s data.run[0]
+data remove entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.run[0]

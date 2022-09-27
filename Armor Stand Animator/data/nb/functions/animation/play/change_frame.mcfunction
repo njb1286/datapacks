@@ -7,13 +7,12 @@ scoreboard players operation @s nb.calcDif.in.time = @s nb.time
     execute store result score @s nb.calcDif.in.to run data get entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.run[0].pos[0] 1000000
     function nb:animation/play/calc_dif/get_dif
     execute store result entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.smooth_move.pos[0] double 1 run scoreboard players get @s nb.calcDif.out
-
+    
     # 1
     execute store result score @s nb.calcDif.in.from run data get entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.from.pos[1] 1000000
     execute store result score @s nb.calcDif.in.to run data get entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.run[0].pos[1] 1000000
     function nb:animation/play/calc_dif/get_dif
     execute store result entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.smooth_move.pos[1] double 1 run scoreboard players get @s nb.calcDif.out
-
 
     # 2
     execute store result score @s nb.calcDif.in.from run data get entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.from.pos[2] 1000000
@@ -150,7 +149,5 @@ scoreboard players operation @s nb.calcDif.in.time = @s nb.time
         execute store result entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.smooth_move.body[2] float 1 run scoreboard players get @s nb.calcDif.out
 
 execute unless score @s nb.frameRepeat matches 1.. run data modify entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.from set from entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.run[0]
-
-tellraw @a {"score": {"name": "@s", "objective": "nb.frameRepeat"}}
 
 tag @s remove nb.calc_dif

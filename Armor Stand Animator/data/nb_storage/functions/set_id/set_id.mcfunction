@@ -1,1 +1,0 @@
-execute in nb_storage:storage positioned 0 0 0 run function nb_storage:set_id/setup

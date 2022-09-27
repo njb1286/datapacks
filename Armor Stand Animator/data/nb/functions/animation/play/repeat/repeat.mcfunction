@@ -1,2 +1,2 @@
-data modify storage nb:animation run_animation set from storage nb:animation animation.frames
-data modify storage nb:animation from set from storage nb:animation animation.start
+data modify entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.run set from entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.main.frames
+data modify entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.from set from entity @e[limit=1,sort=nearest,tag=nb.animation.data] data.main.start
